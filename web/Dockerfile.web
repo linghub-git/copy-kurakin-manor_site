@@ -1,0 +1,14 @@
+FROM python:3.10.8-slim-buster
+WORKDIR /code
+COPY ./web/requirements.txt /code/requirements.txt
+RUN \
+    apt-get update \
+    && apt-get -y install libpq-dev gcc curl \
+    && pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+COPY ./web/templates /code/app/templates
+COPY ./web/static /code/app/static
+COPY ./web/main.py /code/app
+
+EXPOSE 80
+CMD ["python3", "app/main.py"]

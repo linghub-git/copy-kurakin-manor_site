@@ -1,0 +1,199 @@
+{% extends "base.html.j2" %}
+{% block title %}Мастерская проекта{% endblock %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css')}}">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+{% block div %}
+<ul class="navbar-nav">
+  <li class="nav-item active"><a href="/about" class="nav-link active">Главная</a></li>
+  <li class="nav-item active"><a href="/workshop" class="nav-link">Мастерская проекта</a></li>
+  <li class="nav-item active"><a href="" class="nav-link">Виртуальный тур</a></li>
+</ul>
+{% endblock %}            
+{% block main %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<div class="main_container">
+        <img src="static/images/007_2_1.png" alt="Splash_screen" style="width:100%;">
+        <div class="main_title">Фотогалерея</div>
+    </div>
+
+
+<div style="padding-top:50px; padding-left:70px; padding-right:70px;">
+    
+    <p class="about_text">В этом разделе благодаря различным источникам, мы собрали для Вас фотографии усадьбы Куракина из разных эпох.</p>
+    <p class="about_text">После смерти князя А.Б. Куракина его потомки продали дворец в казну, и здание последовательно занимали различные учебные заведения и 
+    административные учреждения. В их чиле Константиновский межевой институт, Александровское коммерческое училище, Московский институт химического университета и,
+    наконец, Высшая школы экономики.</p>
+</div>
+
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="padding-top:50px; padding-left:70px; padding-right:70px; padding-bottom: 100px;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <div class="cards-wrapper">
+        <div class="card">
+            <img class="zoom" src="static/images_for_gallery/konstantin_mezh_inst.jpg" alt="Card image cap" style="max-width: 100%; max-height: 100%">
+            <div class="card-body">
+                <h5 class="card-title">Константиновский межевой институт</h5>
+                <p class="card-text">1836—1873</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="zoom" src="static/images_for_gallery/alex_kom_uch.jpg" alt="Card image cap" style="max-width: 100%; max-height: 100%">
+            <div class="card-body">
+                <h5 class="card-title">Александровское коммерческое училище</h5>
+                <p class="card-text">1880-е — 1918</p>
+            </div>
+        </div>
+
+        <div class="card">
+        <img class="zoom" src="static/images_for_gallery/alex_uch_hall.jpg" alt="Card image cap" style="max-width: 100%; max-height: 100%">
+        <div class="card-body">
+            <h5 class="card-title">Александровское коммерческое училище</h5>
+            <p class="card-text">Холл внутри здания</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="carousel-item">
+    <div class="cards-wrapper">
+        <div class="card">
+            <img class="zoom" src="static/images_for_gallery/alex_uch_account!.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+            <div class="card-body">
+                <h5 class="card-title">Александровское коммерческое училище</h5>
+                <p class="card-text">Класс бухгалтерии</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="zoom" src="static/images_for_gallery/alex_uch_paint.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+            <div class="card-body">
+                <h5 class="card-title">Александровское коммерческое училище</h5>
+                <p class="card-text">Кабинет рисования</p>
+            </div>
+        </div>
+
+        <div class="card">
+        <img class="zoom" src="static/images_for_gallery/alex_uch.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+        <div class="card-body">
+            <h5 class="card-title">Александровское коммерческое училище</h5>
+            <p class="card-text">Вид снаружи</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="carousel-item">
+    <div class="cards-wrapper">
+        <div class="card">
+            <img class="zoom" src="static/images_for_gallery/alex_uch_prayer.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+            <div class="card-body">
+                <h5 class="card-title">Александровское коммерческое училище</h5>
+                <p class="card-text">Молельный зал</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="zoom" src="static/images_for_gallery/alex_uch.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+            <div class="card-body">
+                <h5 class="card-title">Александровское коммерческое училище</h5>
+                <p class="card-text">Внутренний дворик</p>
+            </div>
+        </div>
+
+        <div class="card">
+        <img class="zoom" src="static/images_for_gallery/alex_uch_map.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+        <div class="card-body">
+            <h5 class="card-title">Александровское коммерческое училище</h5>
+            <p class="card-text">План здания</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+      <div class="carousel-item">
+    <div class="cards-wrapper">
+        <div class="card">
+            <img class="zoom" src="static/images_for_gallery/mihm.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+            <div class="card-body">
+                <h5 class="card-title">МИХМ</h5>
+                <p class="card-text">1934-2014</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="zoom" src="static/images_for_gallery/mihm_ladder.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+            <div class="card-body">
+                <h5 class="card-title">МИХМ</h5>
+                <p class="card-text">Лестница с первого на второй этаж</p>
+            </div>
+        </div>
+
+        <div class="card">
+        <img class="zoom" src="static/images_for_gallery/mihm_library.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+        <div class="card-body">
+            <h5 class="card-title">МИХМ</h5>
+            <p class="card-text">Библиотека</p>
+        </div>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="carousel-item">
+    <div class="cards-wrapper">
+        <div class="card">
+            <img class="zoom" src="static/images_for_gallery/mihm_fire.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+            <div class="card-body">
+                <h5 class="card-title">МИХМ</h5>
+                <p class="card-text">После пожара в МИХМ в 1990 году</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="zoom" src="static/images_for_gallery/hse.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+            <div class="card-body">
+                <h5 class="card-title">ВШЭ</h5>
+                <p class="card-text">2014-сегодня</p>
+            </div>
+        </div>
+
+        <div class="card">
+        <img class="zoom" src="static/images_for_gallery/hse_patio.jpg" alt="Card image cap" style="max-width: 100% max-height: 100%">
+          <div class="card-body">
+            <h5 class="card-title">ВШЭ</h5>
+            <p class="card-text">Вид во внутренник дворик</p>
+          </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    
+    
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+
+{% endblock %}    

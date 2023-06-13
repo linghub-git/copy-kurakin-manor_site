@@ -1,0 +1,100 @@
+{% extends "base.html.j2" %}
+{% block title %}Мастерская проекта{% endblock %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css')}}">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+{% block div %}
+<ul class="navbar-nav">
+  <li class="nav-item active"><a href="/about" class="nav-link active">Главная</a></li>
+  <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+    id="navbarDropdown"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false">Интерактив</a>
+    <ul class="dropdown-menu"
+    aria-labelledby="navbarDropdown">
+    <li><a href="#basmannaya" class="dropdown-item">Граф по произведению “Дом 21/4 на Старой Басманной”</a></li>
+    <li><a href="#correspondence" class="dropdown-item">Граф корреспонденции князя А.Б. Куракина</a></li>
+    <li><a href="#ferzen" class="dropdown-item">Анализ переписки князя Куракина с графиней Ферзен</a></li>
+    </ul>
+  </li>
+  <li class="nav-item active"><a href="#data" class="nav-link">Датасеты</a></li>
+  <li class="nav-item active"><a href="#links" class="nav-link">Полезные ссылки</a></li>
+</ul>
+{% endblock %}            
+{% block main %}
+
+
+<div class="main_container">
+        <img src="static/images/007_2_1.png" alt="Splash_screen" style="width:100%;">
+        <div class="main_title">Мастерская проекта</div>
+    </div>
+    <div class="main_container">
+        <h1 class="titles">Интерактив</h1>
+        <p class="about_text"> Здесь вы можете подробнее ознакомиться с результатами 
+            DH исследования, проведенного в рамках проекта. 
+            В виртуальном туре все они представлены в пространстве DH-центра 
+            ВШЭ.</p>
+        </div>
+        <div class="how-section1">
+            <div class="row">
+                <div class="col-md-6 how-img">
+                    <img class="zoom" src="static/images/gephi_dom_na_basmannoi.png" class="rounded-circle img-fluid" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h4 id="basmannaya">Граф по произведению “Дом 21/4 на Старой Басманной”</h4>
+                <div class="overflow-auto p-3 bg-light"
+                style="max-width: 500px; max-height: 400px; background-color: azure; text-align: justify;">Огромную роль в написании  сюжета виртуального тура сыграла работа Александры Плоховой “Дом 21/4 на Старой Басманной”. 
+                    В полу-автобиографическом формате писатель знакомит читателя с судьбоносным участием здания в ее жизни и жизни ее семьи, периодически ссылаясь на различные исторические источники и воссоздавая зарисовки из различных эпох в жизни здания. Так, эта книга послужила важным источником для сбора данных, которые после позволили нам представить историю здания в виде графа именованных сущностей с помощью DH инструмента Gephi. С графиком можно ознакомиться более подробно, перейдя по <a href="https://lizarusakova.github.io/dom_21-4_na_staroi_basmannoi/#">ссылке</a>. Так, представив историю здания визуально, мы утвердились в своей идее создания сюжета, посвященного эпохе князя Куракина.
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 id="correspondence">Граф корреспонденции князя А.Б. Куракина</h4>
+                    <div class="overflow-auto p-3 bg-light"
+                    style="max-width: 500px; max-height: 400px; background-color: azure; text-align: justify;">Из 10 томов  архива дома Куракиных мы выделили именно те письма, где адресатом или адресантом был А.Б. Куракин. Письма датируются 1763-1775 гг. Качество печати, увы, было далеко от идеального, поэтому воспользоваться инструментами машинного распознавания не представлялось возможным. Так, вручную мы собрали датасет, который впоследствии с помощью Gephi и Cytoscape оцифровали в виде карты-графа. Такой формат представления данных очень полезен, поскольку помогает увидеть те закономерности, которые на первый взгляд не уловимы для глаза читателя. Мы видим, что чаще всего Куракин переписывался с генералом Степаном Степановичем Апраксиным, со своей тетей Натальей Александровной Репниной, профессором Пестелем, а также со своим братом Алексеем Куракиным. С результатом нашей работы можно ознакомиться подробнее по <a href="https://imusaeva99.github.io/a.kurakin_archive_8/">ссылке</a>, которая приведет вас напрямую на страницу графа. 
+                    </div>
+                </div>
+                <div class="col-md-6 how-img">
+                    <img class="zoom" src="static/images/8_alex.png" class="rounded-circle img-fluid" alt=""/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 how-img">
+                     <img class="zoom" src="static/images/ferzenfrench2 1.png" class="rounded-circle img-fluid" alt=""/>
+                </div>
+                <div class="col-md-6">
+                    <h4 id="ferzen">Анализ переписки князя Куракина с графиней Ферзен</h4>
+                    <div class="overflow-auto p-3 bg-light"
+                    style="max-width: 500px; max-height: 400px; background-color: azure; text-align: justify;">Особую ценность представляют собой письма князя Куракина с его возлюбленной графиней Евой Софи фон Ферзен. Их история любви была довольно богата, но, увы, не обрела ожидаемого финала в виде брака. Тем не менее, с количественной точки зрения письма представляют большой интерес, поскольку позволяют исследователю выявить наиболее популярные выражения, слова, скажем так, из вокабуляра “языка любви”. Порой именно такой подход позволяет увидеть истинную природу взаимоотношений людей. В общем контексте окраска того или иного слова стирается, однако, если посмотреть отдельно на слова, составляющие речь человека, можно разглядеть то, что по началу не бросается во внимание.
+                                    Оригинальный язык переписки князя с графиней - французский. Но в качестве опыта и для удобства русскоговорящего пользователя мы перевели их на русский. С кодом вы можете познакомиться как перейдя по ссылке. Полученные облака слов подтверждают тот факт, что взаимоотношения А.Б. Куракина с Евой Софи фон Ферзен были теплыми и нежными, о чем нам говорят такие слова, как “plaisir” (франц.- “удовольствие”), “sentiment” (франц.- “чувства”), “bonheur” (франц.- “счастье”), “tendresse” (франц.- “нежность”), “passion” (франц.- “страсть”). Однако такие слова, как “liberte” и “crainte” заставляют нас задуматься о том, что все же какие-то разногласия и обеспокоенность омрачала эти отношения, которым было не суждено закрепиться в брачном союзе.
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="main_container" id="data">
+                <img src="static/images/007_2_1.png" alt="Splash_screen" style="width:100%;">
+                <div class="upper_title" style="font-weight: bold">Датасеты</div>
+                <div class="button">
+                <button type="button" class="btn btn-primary" style="width: 250px; height: 60px; background-color: rgba(0, 90, 171, 0.7);">
+                    <a href="{{url_for('download_file')}}" style="color: #030303; font-weight: 500; font-size: large;">correspondence_kurakin.csv</a></button>
+                <button type="button" class="btn btn-primary" style="width: 250px; height: 60px; background-color: rgba(0, 90, 171, 0.7);">
+                    <a href="{{url_for('download_file_2')}}" style="color: #030303; font-weight: 500; font-size: large;">people_kurakin.csv</a></button>
+                </div>
+            </div>
+            <section class="links" id="links">
+                <div class="main_container">
+                <h1 class="titles">Полезные ссылки</h1>
+                <div class="container_link">
+                <div class="list-group">
+                    <a href="https://github.com/imusaeva99/Kurakin-Manor" class="list-group-item list-group-item-action active" style="background-color: rgba(0, 90, 171, 0.7);">Репозиторий проекта на ГитХаб<img src="{{ url_for('static', filename='images/github_2.png')}}" style="height: 40px; width: 35px; margin-left: 99px;"></a>
+                    <a href="https://runivers.ru/lib/book19692/591674/" class="list-group-item list-group-item-action">Архив дома Куракиных<img src="{{ url_for('static', filename='images/archive_kurakin.png')}}" style="height: 50px; width: 35px; margin-left: 164px;"></a>
+                    <a href="https://www.litres.ru/aleksandra-plohova/dom-21-4-na-staroy-basmannoy/chitat-onlayn/" class="list-group-item list-group-item-action">А. Плохова "Дом 21/4 на Старой Басманной" <img src="{{ url_for('static', filename='images/book.jpg')}}" style="height: 50px; width: 35px"></a>
+                </div>
+                </div>
+            </div>
+            </section>
+        </div>        
+{% endblock %}

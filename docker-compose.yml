@@ -1,0 +1,68 @@
+version: "3.9"
+
+volumes:
+  mongo_data: {}
+  web_data: {}
+
+name: kurakin_manor
+
+networks:
+  t2_proxy:
+    name: t2_proxy
+    external: true
+
+  local-kurakin_manor:
+    name: local-kurakin_manor
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.16.65.0/24
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile.web
+    depends_on:
+      - rest
+    networks:
+      - local-kurakin_manor
+      - t2_proxy
+    volumes:
+      - ./:/app
+    environment:
+      - "REST_URL=http://rest:5000/people"
+    restart: unless-stopped
+    labels:
+      traefik.enable: true
+      traefik.http.routers.hse-kurakin-rtr.entrypoints: http
+      traefik.http.routers.hse-kurakin-rtr.rule: Host(`kurakin.linghub.net`)
+      traefik.http.routers.hse-kurakin-rtr.service: hse-kurakin-svc
+      traefik.http.services.hse-kurakin-svc.loadbalancer.server.port: 80
+      org.label-schema.group: "monitoring"
+
+  rest:
+    build:
+      context: .
+      dockerfile: ./rest/Dockerfile.rest
+    expose:
+      - 5000
+    depends_on:
+      - mongo
+    networks:
+      - local-kurakin_manor
+    volumes:
+      - ./:/app
+    restart: unless-stopped    
+    environment:
+      - MONGO_HOST=mongo
+
+  mongo:
+    image: "mongo:4"
+    restart: unless-stopped
+    networks:
+      - local-kurakin_manor    
+    volumes:
+      - mongo_data:/data/db
+    expose:
+      - 27017

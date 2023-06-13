@@ -1,0 +1,59 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+</head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark" style="background-color:#005AAB">
+        <div class="container">
+        <a href ='#'
+            class="navbar-brand mb-0 h1">
+                <img 
+                class = "d-inline-block align-top"
+                src="static/images/!Логотип_НИУ_ВШЭ.png" 
+                alt="Logo" width="30" height="30"> 
+        </a>
+        <button 
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            class="navbar-toggler"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        {% block div %}
+        {% endblock %}    
+        </div>
+    </nav>
+    {% block main %}{% endblock %}
+     <footer class="text-center pt-4" style="background-color:#005AAB;">
+        <div class="row">
+            <div class="col-6 col-md">
+                <h5></h5>
+                <ul class="list-unstyled text-small">
+                    <li><a href="/feedback" class="link-active" style="color: azure; font-size: 15px">Форма обратной связи</a></li>
+                    <li><a href="https://docs.google.com/forms/d/1P2TFCiH5DLjlK1MT21HKOmEPdFsUbys1Lj5mU0zh_8M/edit" class="link-active" style="color: azure; font-size: 15px">Проверь свои знания</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5 style="color: azure; font-size: 17px">Наши контакты</h5>
+                <ul class="list-unstyled text-small">
+                    <li style="color: azure; font-size: 15px">rliza167@gmail.com</li>
+                    <li><a href="https://github.com/imusaeva99/Kurakin-Manor" class="link-active" style="color: azure; font-size: 15px">Репозиторий на GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/medium-zoom.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  </body>
+</html>

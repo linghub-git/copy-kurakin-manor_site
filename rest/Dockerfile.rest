@@ -1,0 +1,12 @@
+FROM python:3.10.8-slim-buster
+WORKDIR /code
+COPY ./rest/requirements.txt /code/requirements.txt
+RUN \
+    apt-get update \
+    && apt-get -y install libpq-dev gcc curl \
+    && pip install --no-cache-dir --upgrade -r /code/requirements.txt
+COPY ./rest/main.py /code
+COPY ./rest/settings.py /code
+
+CMD ["python3", "main.py"]
+EXPOSE   5000

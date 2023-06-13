@@ -1,0 +1,241 @@
+@font-face { font-family: HSE; src: url('HSE_Sans/HSESans-Regular.otf'); } 
+@font-face { font-family: HSE; font-weight: bold; src: url('HSE_Sans/HSESans-Bold.otf');}
+@font-face { font-family: HSE; font-style: italic; src: url('HSE_Sans/HSESans-Italic.otf');}
+
+.body {
+    font-family: 'HSE', fallback, sans-serif;
+    font-style: normal;
+}
+
+.main_container {
+    position: relative;  /* Container holding the image and the text */
+    text-align: center;
+    color: rgb(32, 29, 29);
+    font-family: 'HSE'
+}
+
+
+.links {
+    background-color: rgba(202, 194, 200, 0.57);
+    padding-top: 8px;
+    padding-bottom: 60px;
+    margin-bottom: 0px;
+    font-family: 'HSE'
+}
+
+.form {
+    background-color: rgba(202, 194, 200, 0.57);
+    padding-top: 8px;
+    padding-bottom: 60px;
+    margin-bottom: 0px;
+    font-family: 'HSE'
+}
+
+
+.container_link {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'HSE'
+}
+
+.container_form{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'HSE'
+}
+
+
+.text_in_row {
+    font-family: 'HSE';
+    position: relative;
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-left: 55px; 
+    padding-right: 55px;
+    text-align: center;
+    color: rgb(32, 29, 29);
+
+}
+
+
+.main_title {
+    font-family: 'HSE';
+    position:absolute;   
+    top: 57%;
+    left: 50%;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 84px;
+    transform: translate(-50%, -50%);
+}
+
+.titles {
+    font-family: 'HSE';
+    margin-top: 16px; 
+    font-style: normal; 
+    font-weight: bold; 
+    font-size: 36px; 
+    line-height: 65px; 
+    text-align: center;
+}
+
+.upper_title {
+    font-family: 'HSE';
+    font-weight: bold;
+    position:absolute;
+    top: 17%;
+    left: 50%;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 84px;
+    transform: translate(-50%, -50%);
+}
+
+
+.button {
+    position:absolute;
+    top: 57%;
+    left: 50%;
+    width:auto;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 84px;
+    transform: translate(-50%, -50%);
+    font-family: 'HSE'
+}
+
+.btn btn-primary {
+    color: rgba(0, 90, 171, 0.7);
+}
+
+
+.how-section1{
+    margin-top:-15%;
+    padding: 10%;
+    font-family: 'HSE'
+}
+
+.how-section1 h4{
+    color: rgb(32, 29, 29);
+    font-weight: bold;
+    font-size: 25px;
+    max-width: 500px;
+    font-family: 'HSE'
+}
+
+.how-section1 .row
+{
+    margin-top: 10%;
+    font-family: 'HSE'
+}
+
+.how-img 
+{
+    text-align: center;
+}
+
+.how-img img{
+    max-width: 100%;
+    height: auto;
+    padding-top: 40px;
+
+}
+
+.about_header {
+    font-family: 'HSE';
+    font-style: bold;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+
+    color: #003087;
+}
+
+.about_text {
+    font-family: 'HSE';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #000000;
+}
+
+.about_container {
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 0px;
+    padding-left: 100px;
+}
+
+.about_people {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    width: 828px;
+    height: 369px;
+}
+
+.text_people {
+    font-family: 'HSE';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+.name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #003087;
+}
+
+.cards-wrapper{
+    display: flex;
+}
+
+.card{
+    margin: 0 .5em;
+    width: calc(100%/3);
+}
+
+.card-text {
+    font-family: 'HSE';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+.card-title {
+    font-family: 'HSE';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
